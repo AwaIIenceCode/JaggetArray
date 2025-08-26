@@ -7,7 +7,7 @@ class MyClass
         {
             for (int j = 0; j < userArr[i].Length; j++)
             {
-                Console.Write($"Enter the {j + 1} number -> ");
+                Console.Write($"Enter the {j + 1} number in {i + 1} array -> ");
                 string? input = Console.ReadLine()?.Trim();
                 
                 if (int.TryParse(input, out int value))
@@ -39,13 +39,13 @@ class MyClass
     {
         int userSizeColumn, userSizeLine;
         
-        Console.WriteLine("Enter the size column your array -> ");
+        Console.Write("Enter the size column your array -> ");
         if (!int.TryParse(Console.ReadLine(), out userSizeColumn) || userSizeColumn <= 0) { Console.WriteLine("Must be a positive number!"); return; }
         int[][] userArr = new int[userSizeColumn][];
 
         for (int i = 0; i < userSizeColumn; i++)
         {
-            Console.WriteLine($"How many elements in column {i + 1}: ");
+            Console.Write($"How many elements in column {i + 1}: ");
             if (!int.TryParse(Console.ReadLine(), out userSizeLine) || userSizeLine <= 0) { Console.WriteLine("Must be a positive number!"); i--; continue; }
 
             userArr[i] = new int[userSizeLine];

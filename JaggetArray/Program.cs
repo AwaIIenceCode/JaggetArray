@@ -35,6 +35,22 @@ class MyClass
             Console.WriteLine();
         }
     }
+
+    static void FindSumArray(int [][] userArr)
+    {
+        int sumArray = 0;
+
+        for (int i = 0; i < userArr.Length; i++)
+        {
+            for (int j = 0; j < userArr[i].Length; j++)
+            {
+                sumArray += userArr[i][j];
+            }
+        }
+        
+        Console.WriteLine($"\nSum your array -> {sumArray}");
+    }
+    
     static void Main()
     {
         int userSizeColumn, userSizeLine;
@@ -57,7 +73,7 @@ class MyClass
         {
 
             Console.WriteLine("\nPress \"1\" - for showing full array" +
-                              "\nPress \"2\" - for ..." +
+                              "\nPress \"2\" - for showing sum your array" +
                               "\nPress \"3\" - for ..." +
                               "\nPress \"4\" - for ..." +
                               "\nPress \"5\" - for ..." +
@@ -72,9 +88,7 @@ class MyClass
                 { ShowArray(userArr); break; }
 
                 case "2":
-                {
-                    break;
-                }
+                { FindSumArray(userArr); break; }
 
                 case "3":
                 {
@@ -92,9 +106,7 @@ class MyClass
                 }
 
                 case "Exit":
-                {
-                    break;
-                }
+                { return; }
                 
                 default:
                     Console.WriteLine("Try again..."); break;

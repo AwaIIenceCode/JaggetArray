@@ -8,7 +8,7 @@ class MyClass
             for (int j = 0; j < userArr[i].Length; j++)
             {
                 Console.Write($"Enter the {j + 1} number -> ");
-                string? input = Console.ReadLine();
+                string? input = Console.ReadLine()?.Trim();
                 
                 if (int.TryParse(input, out int value))
                 {
@@ -24,7 +24,17 @@ class MyClass
             }
         }
     }
-
+    static void ShowArray(int[][] userArr)
+    {
+        for (int i = 0; i < userArr.Length; i++)
+        {
+            for (int j = 0; j < userArr[i].Length; j++)
+            {
+                Console.Write(userArr[i][j] + " ");
+            }
+            Console.WriteLine();
+        }
+    }
     static void Main()
     {
         int userSizeColumn, userSizeLine;
@@ -42,5 +52,6 @@ class MyClass
         }
         
         FillArray(userArr);
+        ShowArray(userArr);
     }
 }

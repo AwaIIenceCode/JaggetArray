@@ -85,6 +85,27 @@ class MyClass
         
         Console.WriteLine($"\nMin element your array -> {minElement}");
     }
+
+    static void FindAverageValue(int[][] userArr)
+    {
+        double averageValue;
+        
+        for (int i = 0; i < userArr.Length; i++)
+        {
+            int numberCount = 0;
+            int columnSum = 0;
+            
+            for (int j = 0; j < userArr[i].Length; j++)
+            {
+                columnSum += userArr[i][j];
+                numberCount ++;
+            }
+            
+            averageValue = (double)columnSum / numberCount;
+            Console.WriteLine($"Average value {i + 1} column is {averageValue:F2}");
+        }
+    }
+    
     static void Main()
     {
         int userSizeColumn, userSizeLine;
@@ -110,7 +131,7 @@ class MyClass
                               "\nPress \"2\" - for showing sum your array" +
                               "\nPress \"3\" - for showing max element your array" +
                               "\nPress \"4\" - for showing min element your array" +
-                              "\nPress \"5\" - for ..." +
+                              "\nPress \"5\" - for showing average value your array" +
                               "\nWrite \"Exit\" for exit the program");
             
             Console.Write("\nEnter your choise ->");
@@ -132,10 +153,10 @@ class MyClass
 
                 case "5":
                 {
-                    break;
+                    FindAverageValue(userArr); break;
                 }
 
-                case "Exit":
+                case "exit":
                 { return; }
                 
                 default:

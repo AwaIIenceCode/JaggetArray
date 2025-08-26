@@ -28,7 +28,7 @@ class MyClass
 
     static void ShowArray(int[][] userArr)
     {
-        Console.Write("\nYour array -> ");
+        Console.Write("\nYour array ->\n");
         
         for (int i = 0; i < userArr.Length; i++)
         {

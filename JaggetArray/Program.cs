@@ -52,6 +52,53 @@ class MyClass
         }
         
         FillArray(userArr);
-        ShowArray(userArr);
+
+        while (true)
+        {
+
+            Console.WriteLine("\nPress \"1\" - for showing full array" +
+                              "\nPress \"2\" - for ..." +
+                              "\nPress \"3\" - for ..." +
+                              "\nPress \"4\" - for ..." +
+                              "\nPress \"5\" - for ..." +
+                              "\nWrite \"Exit\" for exit the program");
+            
+            Console.Write("\nEnter your choise ->");
+            string userChoice = Console.ReadLine()?.ToLower();
+
+            switch (userChoice)
+            {
+                case "1":
+                { ShowArray(userArr); break; }
+
+                case "2":
+                {
+                    break;
+                }
+
+                case "3":
+                {
+                    break;
+                }
+
+                case "4":
+                {
+                    break;
+                }
+
+                case "5":
+                {
+                    break;
+                }
+
+                case "Exit":
+                {
+                    break;
+                }
+                
+                default:
+                    Console.WriteLine("Try again..."); break;
+            }
+        }
     }
 }

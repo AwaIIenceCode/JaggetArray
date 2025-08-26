@@ -36,7 +36,7 @@ class MyClass
         }
     }
 
-    static void FindSumArray(int [][] userArr)
+    static void FindSumArray(int[][] userArr)
     {
         int sumArray = 0;
 
@@ -50,7 +50,41 @@ class MyClass
         
         Console.WriteLine($"\nSum your array -> {sumArray}");
     }
-    
+
+    static void FindMaxElement(int[][] userArr)
+    {
+        int maxElement = userArr[0][0];
+
+        for (int i = 0; i < userArr.Length; i++)
+        {
+            for (int j = 0; j < userArr[i].Length; j++)
+            {
+                if (userArr[i][j] > maxElement)
+                {
+                    maxElement = userArr[i][j];
+                }
+            }
+        }
+        
+        Console.WriteLine($"\nMax element your array -> {maxElement}");
+    }
+    static void FindMinElement(int[][] userArr)
+    {
+        int minElement = userArr[0][0];
+
+        for (int i = 0; i < userArr.Length; i++)
+        {
+            for (int j = 0; j < userArr[i].Length; j++)
+            {
+                if (userArr[i][j] < minElement)
+                {
+                    minElement = userArr[i][j];
+                }
+            }
+        }
+        
+        Console.WriteLine($"\nMin element your array -> {minElement}");
+    }
     static void Main()
     {
         int userSizeColumn, userSizeLine;
@@ -74,8 +108,8 @@ class MyClass
 
             Console.WriteLine("\nPress \"1\" - for showing full array" +
                               "\nPress \"2\" - for showing sum your array" +
-                              "\nPress \"3\" - for ..." +
-                              "\nPress \"4\" - for ..." +
+                              "\nPress \"3\" - for showing max element your array" +
+                              "\nPress \"4\" - for showing min element your array" +
                               "\nPress \"5\" - for ..." +
                               "\nWrite \"Exit\" for exit the program");
             
@@ -91,14 +125,10 @@ class MyClass
                 { FindSumArray(userArr); break; }
 
                 case "3":
-                {
-                    break;
-                }
+                { FindMaxElement(userArr); break; }
 
                 case "4":
-                {
-                    break;
-                }
+                { FindMinElement(userArr); break; }
 
                 case "5":
                 {

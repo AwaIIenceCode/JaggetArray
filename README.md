@@ -30,3 +30,8 @@ This repository contains small console programs for learning array manipulation,
 ```bash
 git clone <your-repo-url>
 ```
+2. Open the solution in Visual Studio or any C# IDE.
+
+3. Build and run the project.
+
+4. Follow on-screen instructions to choose tasks and commands.
